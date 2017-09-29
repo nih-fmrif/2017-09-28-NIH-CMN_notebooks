@@ -1,0 +1,1188 @@
+   174	10:19	git diff 1e87ac7381472a2bc59e7d83212eda8e27a51d07 mars.txt
+   175	10:20	history | grep oneline
+   176	10:20	git log --oneline --graph --all --decorate
+   177	10:21	git diff 1e87ac7 mars.txt
+   178	10:22	nano mars.txt
+   179	10:23	git status
+   180	10:23	git diff 1e87ac7 mars.txt
+   181	10:23	git diff head mars.txt
+   182	10:23	git diff HEAD mars.txt
+   183	10:25	git status
+   184	10:26	git checkout HEAD mars.txt
+   185	10:26	git status
+   186	10:26	cat mars.txt
+   187	10:27	history | grep oneline
+   188	10:27	git log --oneline --graph --all --decorate
+   189	10:27	git checkout 1e87ac7 mars.txt
+   190	10:28	git status
+   191	10:28	cat mars.txt
+   192	10:29	git checkout -f master mars.txt
+   193	10:29	git status
+   194	10:32	git log mars.txt
+   195	10:32	git log --patch HEAD~3 mars.txt
+   196	10:33	git log --patch HEAD~2 mars.txt
+   197	10:46	pwd
+   198	10:46	mkdir results
+   199	10:46	touch a.dat b.dat c.dat results/a.out results/b.out
+   200	10:46	git status
+   201	10:47	ls -lF
+   202	10:47	ls -alF
+   203	10:48	nano .gitignore
+   204	10:48	ls -alF
+   205	10:49	cat .gitignore
+   206	10:49	git status
+   207	10:50	git add .gitignore
+   208	10:51	git commit -m "Setting up ignore list for git"
+   209	10:51	git add a.dat
+   210	10:51	git add -f a.dat
+   211	10:51	git status
+   212	10:52	git reset HEAD a.dat
+   213	10:52	git status
+   214	10:52	git status --ignored
+   215	10:53	git help status
+   216	10:55	mkdir results/data
+   217	10:55	mkdir results/plots
+   218	10:56	nano .gitignore
+   219	10:56	git status
+   220	10:57	ls -alF
+   221	10:57	nano .gitignore
+   222	10:58	git status
+   223	10:59	cat .gitignore
+   224	10:59	nano .gitignore
+   225	11:00	git status
+   226	11:11	git remote
+   227	11:11	git remote -a
+   228	11:11	git remote -v
+   229	11:11	git remote add origin https://github.com/rv-nih/planets.git
+   230	11:11	git remote -v
+   231	11:14	git push origin master
+   232	11:14	git --version
+   233	11:15	git remote add origin https://rv-nih@github.com/rv-nih/planets.git
+   234	11:15	git remote remove origin
+   235	11:15	git remote add origin https://rv-nih@github.com/rv-nih/planets.git
+   236	11:15	git remote -v
+   237	11:16	git push origin master
+   238	11:17	git remote -v
+   239	11:17	git pull
+   240	11:18	ls -alF
+   241	11:18	git pull origin master
+   242	11:19	git branch --set-upstream-to=origin/master master
+   243	11:19	git pull origin master
+   244	11:19	git remote -v
+   245	11:20	git help push
+   246	11:21	git push -f origin master
+   247	11:22	git pull
+   248	11:37	cd ..
+   249	11:37	ls -al
+   250	11:37	mv planets/ planets-vr-nih
+   251	11:39	git clone https://github.com/rv-nih/planets.git
+   252	11:39	ls -al
+   253	11:39	cd planets
+   254	11:39	ls -al
+   255	11:40	git clone https://github.com/rv-nih/planets.git planets-rv-nih-2
+   256	11:41	ls -al
+   257	11:41	rm -rf planets-rv-nih-2/
+   258	11:41	cd ..
+   259	11:41	ls -alF
+   260	11:41	git clone https://github.com/rv-nih/planets.git planets-rv-nih-command-line-rename
+   261	11:41	ls -al
+   262	11:43	rm -rf planets-rv-nih-command-line-rename/
+   263	11:43	mv planets-vr-nih/ planets-teching
+   264	11:43	mv planets planets-cloned
+   265	11:43	ls -al
+   266	11:43	cd planets-cloned/
+   267	11:43	ls -al
+   268	11:44	nano pluto.txt
+   269	11:44	git status
+   270	11:44	git add pluto.txt
+   271	11:45	git commit -m "Message about Pluto's status"
+   272	12:11	cd ..
+   273	12:11	history > git-novice-lesson-commands.txt
+
+
+MH01971931MACLT:~ 8:43:04 62% git --version
+git version 2.13.5 (Apple Git-94)
+MH01971931MACLT:~ DING! 63% git config
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-regex]
+    --get-all             get all values: key [value-regex]
+    --get-regexp          get values for regexp: name-regex [value-regex]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value_regex]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-regex]
+    --unset-all           remove all matches: name [value-regex]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --path                value is a path (file or directory name)
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+
+MH01971931MACLT:~ 9:11:00 64% git config help
+error: key does not contain a section: help
+MH01971931MACLT:~ 9:11:17 65% git help config 
+MH01971931MACLT:~ 9:11:48 66% git config --global "Vinai R."
+error: key does not contain variable name: Vinai R.
+MH01971931MACLT:~ 9:12:47 67% git config --global user.name "Vinai R."
+MH01971931MACLT:~ 9:13:00 68% git config --global user.email "roopchansinghv@mail.nih.gov"
+MH01971931MACLT:~ 9:13:33 69% git config --global core.editir "nano -w"
+MH01971931MACLT:~ 9:14:20 70% git config --global core.editir "vim"
+MH01971931MACLT:~ 9:14:36 71% git config --global core.editir "nano -w"
+MH01971931MACLT:~ 9:14:45 72% cd Downloads/
+MH01971931MACLT:~/Downloads 9:16:18 73% ls -al
+total 0
+drwx------@  3 roopchansinghv  1360859114   102 Sep 28 12:47 .
+drwxr-xr-x+ 31 roopchansinghv  1360859114  1054 Sep 29 09:14 ..
+-rw-r--r--@  1 roopchansinghv  1360859114     0 Sep 28 12:47 .localized
+MH01971931MACLT:~/Downloads 9:16:20 74% mkdir planets
+MH01971931MACLT:~/Downloads 9:16:45 75% ls -alF
+total 0
+drwx------@  4 roopchansinghv  1360859114   136 Sep 29 09:16 ./
+drwxr-xr-x+ 31 roopchansinghv  1360859114  1054 Sep 29 09:14 ../
+-rw-r--r--@  1 roopchansinghv  1360859114     0 Sep 28 12:47 .localized
+drwxr-xr-x   2 roopchansinghv  1360859114    68 Sep 29 09:16 planets/
+MH01971931MACLT:~/Downloads 9:16:50 76% cd planets/
+MH01971931MACLT:~/Downloads/planets 9:16:54 77% ls -alF
+total 0
+drwxr-xr-x  2 roopchansinghv  1360859114   68 Sep 29 09:16 ./
+drwx------@ 4 roopchansinghv  1360859114  136 Sep 29 09:16 ../
+MH01971931MACLT:~/Downloads/planets 9:17:03 78% git init
+Initialized empty Git repository in /Users/roopchansinghv/Downloads/planets/.git/
+MH01971931MACLT:~/Downloads/planets 9:17:16 79% ls 
+MH01971931MACLT:~/Downloads/planets 9:17:38 80% ls -alF
+total 0
+drwxr-xr-x  3 roopchansinghv  1360859114  102 Sep 29 09:17 ./
+drwx------@ 4 roopchansinghv  1360859114  136 Sep 29 09:16 ../
+drwxr-xr-x  9 roopchansinghv  1360859114  306 Sep 29 09:17 .git/
+MH01971931MACLT:~/Downloads/planets 9:17:44 81% git status
+On branch master
+
+Initial commit
+
+nothing to commit (create/copy files and use "git add" to track)
+MH01971931MACLT:~/Downloads/planets 9:18:40 82% mkdir moons
+MH01971931MACLT:~/Downloads/planets 9:21:25 83% cd moons/
+MH01971931MACLT:~/Downloads/planets/moons 9:21:29 84% git init
+Initialized empty Git repository in /Users/roopchansinghv/Downloads/planets/moons/.git/
+MH01971931MACLT:~/Downloads/planets/moons 9:21:32 85% ls -alF
+total 0
+drwxr-xr-x  3 roopchansinghv  1360859114  102 Sep 29 09:21 ./
+drwxr-xr-x  4 roopchansinghv  1360859114  136 Sep 29 09:21 ../
+drwxr-xr-x  9 roopchansinghv  1360859114  306 Sep 29 09:21 .git/
+MH01971931MACLT:~/Downloads/planets/moons 9:21:36 86% ls -alF ..
+total 0
+drwxr-xr-x  4 roopchansinghv  1360859114  136 Sep 29 09:21 ./
+drwx------@ 4 roopchansinghv  1360859114  136 Sep 29 09:16 ../
+drwxr-xr-x  9 roopchansinghv  1360859114  306 Sep 29 09:18 .git/
+drwxr-xr-x  3 roopchansinghv  1360859114  102 Sep 29 09:21 moons/
+MH01971931MACLT:~/Downloads/planets/moons 9:21:46 87% cd ..
+MH01971931MACLT:~/Downloads/planets 9:21:49 88% git status
+On branch master
+
+Initial commit
+
+nothing to commit (create/copy files and use "git add" to track)
+MH01971931MACLT:~/Downloads/planets 9:21:52 89% rm -rf moons/
+MH01971931MACLT:~/Downloads/planets 9:22:31 90% nano mars.txt
+MH01971931MACLT:~/Downloads/planets 9:23:48 91% ls -alF
+total 8
+drwxr-xr-x  4 roopchansinghv  1360859114  136 Sep 29 09:23 ./
+drwx------@ 4 roopchansinghv  1360859114  136 Sep 29 09:16 ../
+drwxr-xr-x  9 roopchansinghv  1360859114  306 Sep 29 09:21 .git/
+-rw-r--r--  1 roopchansinghv  1360859114   40 Sep 29 09:23 mars.txt
+MH01971931MACLT:~/Downloads/planets 9:23:52 92% cat mars.txt 
+Cold and dry, but everything is so red.
+MH01971931MACLT:~/Downloads/planets 9:24:00 93% git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	mars.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+MH01971931MACLT:~/Downloads/planets 9:24:28 94% git add mars.txt 
+MH01971931MACLT:~/Downloads/planets 9:25:18 95% git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   mars.txt
+
+MH01971931MACLT:~/Downloads/planets 9:25:24 96% git rm --cached mars.txt 
+rm 'mars.txt'
+MH01971931MACLT:~/Downloads/planets 9:26:36 97% ls -al
+total 8
+drwxr-xr-x   4 roopchansinghv  1360859114  136 Sep 29 09:23 .
+drwx------@  4 roopchansinghv  1360859114  136 Sep 29 09:16 ..
+drwxr-xr-x  10 roopchansinghv  1360859114  340 Sep 29 09:26 .git
+-rw-r--r--   1 roopchansinghv  1360859114   40 Sep 29 09:23 mars.txt
+MH01971931MACLT:~/Downloads/planets 9:26:38 98% cat mars.txt 
+Cold and dry, but everything is so red.
+MH01971931MACLT:~/Downloads/planets 9:26:50 99% git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	mars.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+MH01971931MACLT:~/Downloads/planets 9:26:56 100% git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	mars.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+MH01971931MACLT:~/Downloads/planets 9:32:36 101% git add mars.txt 
+MH01971931MACLT:~/Downloads/planets 9:32:42 102% git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   mars.txt
+
+MH01971931MACLT:~/Downloads/planets 9:32:49 103% git commit -m "Start planets project with notes on Mars."
+[master (root-commit) 1e87ac7] Start planets project with notes on Mars.
+ 1 file changed, 1 insertion(+)
+ create mode 100644 mars.txt
+MH01971931MACLT:~/Downloads/planets 9:33:46 104% git status
+On branch master
+nothing to commit, working tree clean
+MH01971931MACLT:~/Downloads/planets 9:34:32 105% git log
+commit 1e87ac7381472a2bc59e7d83212eda8e27a51d07 (HEAD -> master)
+Author: Vinai R <roopchansinghv@mail.nih.gov>
+Date:   Fri Sep 29 09:33:46 2017 -0400
+
+    Start planets project with notes on Mars.
+MH01971931MACLT:~/Downloads/planets 9:35:13 106% nano mars.txt 
+MH01971931MACLT:~/Downloads/planets 9:37:36 107% git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   mars.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+MH01971931MACLT:~/Downloads/planets 9:37:50 108% cat mars.txt 
+Cold and dry, but everything is so red.
+2 moons may be a problem for the wolfman - when does he howl?
+
+MH01971931MACLT:~/Downloads/planets 9:38:31 109% git diff
+diff --git a/mars.txt b/mars.txt
+index 81bab10..e249caa 100644
+--- a/mars.txt
++++ b/mars.txt
+@@ -1 +1,3 @@
+ Cold and dry, but everything is so red.
++2 moons may be a problem for the wolfman - when does he howl?
++
+MH01971931MACLT:~/Downloads/planets 9:39:02 110% git diff --patch
+diff --git a/mars.txt b/mars.txt
+index 81bab10..e249caa 100644
+--- a/mars.txt
++++ b/mars.txt
+@@ -1 +1,3 @@
+ Cold and dry, but everything is so red.
++2 moons may be a problem for the wolfman - when does he howl?
++
+MH01971931MACLT:~/Downloads/planets 9:40:51 111% git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   mars.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+MH01971931MACLT:~/Downloads/planets 9:42:02 112% cat mars.txt 
+Cold and dry, but everything is so red.
+2 moons may be a problem for the wolfman - when does he howl?
+
+MH01971931MACLT:~/Downloads/planets 9:42:11 113% git checkout -- mars.txt 
+MH01971931MACLT:~/Downloads/planets 9:42:57 114% cat mars.txt
+Cold and dry, but everything is so red.
+MH01971931MACLT:~/Downloads/planets 9:43:01 115% nano mars.txt 
+MH01971931MACLT:~/Downloads/planets 9:44:03 116% cat mars.txt
+Cold and dry, but everything is so red.
+Two moons problematic for Wolfman - when to howl?
+MH01971931MACLT:~/Downloads/planets 9:44:05 117% git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   mars.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+MH01971931MACLT:~/Downloads/planets 9:44:16 118% git add mars.txt 
+MH01971931MACLT:~/Downloads/planets 9:44:26 119% git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   mars.txt
+
+MH01971931MACLT:~/Downloads/planets 9:44:30 120% git commit -m "Potential effects of Mars' moons on Wolfman"
+[master 542b85d] Potential effects of Mars' moons on Wolfman
+ 1 file changed, 1 insertion(+)
+MH01971931MACLT:~/Downloads/planets 9:46:07 121% git status
+On branch master
+nothing to commit, working tree clean
+MH01971931MACLT:~/Downloads/planets 9:46:26 122% git log
+commit 542b85d9129141f953bc8e0d63bbacd74208c0e1 (HEAD -> master)
+Author: Vinai R <roopchansinghv@mail.nih.gov>
+Date:   Fri Sep 29 09:46:07 2017 -0400
+
+    Potential effects of Mars' moons on Wolfman
+
+commit 1e87ac7381472a2bc59e7d83212eda8e27a51d07
+Author: Vinai R <roopchansinghv@mail.nih.gov>
+Date:   Fri Sep 29 09:33:46 2017 -0400
+
+    Start planets project with notes on Mars.
+MH01971931MACLT:~/Downloads/planets 9:47:18 123% nano mars.txt 
+MH01971931MACLT:~/Downloads/planets 9:48:27 124% git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   mars.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+MH01971931MACLT:~/Downloads/planets 9:48:36 125% git add mars.txt 
+MH01971931MACLT:~/Downloads/planets 9:48:57 126% git diff
+MH01971931MACLT:~/Downloads/planets 9:49:08 127% git diff --staged
+diff --git a/mars.txt b/mars.txt
+index 8e4b033..6b4590a 100644
+--- a/mars.txt
++++ b/mars.txt
+@@ -1,2 +1,3 @@
+ Cold and dry, but everything is so red.
+ Two moons problematic for Wolfman - when to howl?
++The Mummy appreciates the low humidity
+MH01971931MACLT:~/Downloads/planets 9:49:27 128% history | grep cache
+    96	9:26	git rm --cached mars.txt
+   128	9:51	history | grep cache
+MH01971931MACLT:~/Downloads/planets 9:51:19 129% !96
+git rm --cached mars.txt
+rm 'mars.txt'
+MH01971931MACLT:~/Downloads/planets 9:51:58 130% git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	deleted:    mars.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	mars.txt
+
+MH01971931MACLT:~/Downloads/planets 9:52:13 131% git diff
+MH01971931MACLT:~/Downloads/planets 9:52:28 132% cat mars.txt 
+Cold and dry, but everything is so red.
+Two moons problematic for Wolfman - when to howl?
+The Mummy appreciates the low humidity
+MH01971931MACLT:~/Downloads/planets 9:52:35 133% git reset HEAD mars.txt 
+Unstaged changes after reset:
+M	mars.txt
+MH01971931MACLT:~/Downloads/planets 9:53:33 134% git diff
+diff --git a/mars.txt b/mars.txt
+index 8e4b033..6b4590a 100644
+--- a/mars.txt
++++ b/mars.txt
+@@ -1,2 +1,3 @@
+ Cold and dry, but everything is so red.
+ Two moons problematic for Wolfman - when to howl?
++The Mummy appreciates the low humidity
+MH01971931MACLT:~/Downloads/planets 9:53:38 135% git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   mars.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+MH01971931MACLT:~/Downloads/planets 9:53:49 136% git add mars.txt 
+MH01971931MACLT:~/Downloads/planets 9:56:19 137% git commit -m "Comments on climate suitability for the Mummy"
+[master a13e290] Comments on climate suitability for the Mummy
+ 1 file changed, 1 insertion(+)
+MH01971931MACLT:~/Downloads/planets 9:56:57 138% git status
+On branch master
+nothing to commit, working tree clean
+MH01971931MACLT:~/Downloads/planets 9:57:06 139% git log
+commit a13e29021d332cf2d0a45f15192643a1984cbbca (HEAD -> master)
+Author: Vinai R <roopchansinghv@mail.nih.gov>
+Date:   Fri Sep 29 09:56:57 2017 -0400
+
+    Comments on climate suitability for the Mummy
+
+commit 542b85d9129141f953bc8e0d63bbacd74208c0e1
+Author: Vinai R <roopchansinghv@mail.nih.gov>
+Date:   Fri Sep 29 09:46:07 2017 -0400
+
+    Potential effects of Mars' moons on Wolfman
+
+commit 1e87ac7381472a2bc59e7d83212eda8e27a51d07
+Author: Vinai R <roopchansinghv@mail.nih.gov>
+Date:   Fri Sep 29 09:33:46 2017 -0400
+
+    Start planets project with notes on Mars.
+MH01971931MACLT:~/Downloads/planets 9:57:40 140% git log -1
+commit a13e29021d332cf2d0a45f15192643a1984cbbca (HEAD -> master)
+Author: Vinai R <roopchansinghv@mail.nih.gov>
+Date:   Fri Sep 29 09:56:57 2017 -0400
+
+    Comments on climate suitability for the Mummy
+MH01971931MACLT:~/Downloads/planets 9:58:47 141% git log -2
+commit a13e29021d332cf2d0a45f15192643a1984cbbca (HEAD -> master)
+Author: Vinai R <roopchansinghv@mail.nih.gov>
+Date:   Fri Sep 29 09:56:57 2017 -0400
+
+    Comments on climate suitability for the Mummy
+
+commit 542b85d9129141f953bc8e0d63bbacd74208c0e1
+Author: Vinai R <roopchansinghv@mail.nih.gov>
+Date:   Fri Sep 29 09:46:07 2017 -0400
+
+    Potential effects of Mars' moons on Wolfman
+MH01971931MACLT:~/Downloads/planets 9:59:04 142% git log --online --graph --all --decorate
+fatal: unrecognized argument: --online
+MH01971931MACLT:~/Downloads/planets DING! 143% git log --oneline --graph --all --decorate
+* a13e290 (HEAD -> master) Comments on climate suitability for the Mummy
+* 542b85d Potential effects of Mars' moons on Wolfman
+* 1e87ac7 Start planets project with notes on Mars.
+MH01971931MACLT:~/Downloads/planets 10:00:10 144% git status
+On branch master
+nothing to commit, working tree clean
+MH01971931MACLT:~/Downloads/planets 10:01:26 145% ls -al
+total 8
+drwxr-xr-x   4 roopchansinghv  1360859114  136 Sep 29 09:42 .
+drwx------@  4 roopchansinghv  1360859114  136 Sep 29 09:16 ..
+drwxr-xr-x  12 roopchansinghv  1360859114  408 Sep 29 10:01 .git
+-rw-r--r--   1 roopchansinghv  1360859114  129 Sep 29 09:48 mars.txt
+MH01971931MACLT:~/Downloads/planets 10:01:31 146% ls -alF
+total 8
+drwxr-xr-x   4 roopchansinghv  1360859114  136 Sep 29 09:42 ./
+drwx------@  4 roopchansinghv  1360859114  136 Sep 29 09:16 ../
+drwxr-xr-x  12 roopchansinghv  1360859114  408 Sep 29 10:01 .git/
+-rw-r--r--   1 roopchansinghv  1360859114  129 Sep 29 09:48 mars.txt
+MH01971931MACLT:~/Downloads/planets 10:01:35 147% mkdir moons
+MH01971931MACLT:~/Downloads/planets 10:01:51 148% 
+MH01971931MACLT:~/Downloads/planets 10:01:53 148% ls -alF
+total 8
+drwxr-xr-x   5 roopchansinghv  1360859114  170 Sep 29 10:01 ./
+drwx------@  4 roopchansinghv  1360859114  136 Sep 29 09:16 ../
+drwxr-xr-x  12 roopchansinghv  1360859114  408 Sep 29 10:01 .git/
+-rw-r--r--   1 roopchansinghv  1360859114  129 Sep 29 09:48 mars.txt
+drwxr-xr-x   2 roopchansinghv  1360859114   68 Sep 29 10:01 moons/
+MH01971931MACLT:~/Downloads/planets 10:01:55 149% git status
+On branch master
+nothing to commit, working tree clean
+MH01971931MACLT:~/Downloads/planets 10:02:11 150% touch moons/triton
+MH01971931MACLT:~/Downloads/planets 10:02:50 151% ls -alF
+total 8
+drwxr-xr-x   5 roopchansinghv  1360859114  170 Sep 29 10:01 ./
+drwx------@  4 roopchansinghv  1360859114  136 Sep 29 09:16 ../
+drwxr-xr-x  12 roopchansinghv  1360859114  408 Sep 29 10:02 .git/
+-rw-r--r--   1 roopchansinghv  1360859114  129 Sep 29 09:48 mars.txt
+drwxr-xr-x   3 roopchansinghv  1360859114  102 Sep 29 10:02 moons/
+MH01971931MACLT:~/Downloads/planets 10:02:54 152% ls -alF moons/
+total 0
+drwxr-xr-x  3 roopchansinghv  1360859114  102 Sep 29 10:02 ./
+drwxr-xr-x  5 roopchansinghv  1360859114  170 Sep 29 10:01 ../
+-rw-r--r--  1 roopchansinghv  1360859114    0 Sep 29 10:02 triton
+MH01971931MACLT:~/Downloads/planets 10:03:11 153% git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	moons/
+
+nothing added to commit but untracked files present (use "git add" to track)
+MH01971931MACLT:~/Downloads/planets 10:03:17 154% git add moons/
+MH01971931MACLT:~/Downloads/planets 10:03:42 155% git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   moons/triton
+
+MH01971931MACLT:~/Downloads/planets 10:03:45 156% git reset HEAD moons/triton 
+MH01971931MACLT:~/Downloads/planets 10:04:54 157% git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	moons/
+
+nothing added to commit but untracked files present (use "git add" to track)
+MH01971931MACLT:~/Downloads/planets 10:04:59 158% ls -alF
+total 8
+drwxr-xr-x   5 roopchansinghv  1360859114  170 Sep 29 10:01 ./
+drwx------@  4 roopchansinghv  1360859114  136 Sep 29 09:16 ../
+drwxr-xr-x  12 roopchansinghv  1360859114  408 Sep 29 10:04 .git/
+-rw-r--r--   1 roopchansinghv  1360859114  129 Sep 29 09:48 mars.txt
+drwxr-xr-x   3 roopchansinghv  1360859114  102 Sep 29 10:02 moons/
+MH01971931MACLT:~/Downloads/planets 10:09:42 159% ls -al moons/
+total 0
+drwxr-xr-x  3 roopchansinghv  1360859114  102 Sep 29 10:02 .
+drwxr-xr-x  5 roopchansinghv  1360859114  170 Sep 29 10:01 ..
+-rw-r--r--  1 roopchansinghv  1360859114    0 Sep 29 10:02 triton
+MH01971931MACLT:~/Downloads/planets 10:09:49 160% touch asteroids
+MH01971931MACLT:~/Downloads/planets 10:09:56 161% git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	asteroids
+	moons/
+
+nothing added to commit but untracked files present (use "git add" to track)
+MH01971931MACLT:~/Downloads/planets 10:10:01 162% git add asteroids moons/
+MH01971931MACLT:~/Downloads/planets 10:10:13 163% git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   asteroids
+	new file:   moons/triton
+
+MH01971931MACLT:~/Downloads/planets 10:10:17 164% git reset HEAD asteroids moons/triton 
+MH01971931MACLT:~/Downloads/planets 10:12:22 165% git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	asteroids
+	moons/
+
+nothing added to commit but untracked files present (use "git add" to track)
+MH01971931MACLT:~/Downloads/planets 10:12:25 166% rm -r asteroids moons/
+remove asteroids? y
+examine files in directory moons/? y
+remove moons//triton? y
+remove moons/? y
+MH01971931MACLT:~/Downloads/planets 10:12:41 167% nano mars.txt 
+MH01971931MACLT:~/Downloads/planets 10:13:15 168% git diff
+diff --git a/mars.txt b/mars.txt
+index 6b4590a..9895d0a 100644
+--- a/mars.txt
++++ b/mars.txt
+@@ -1,3 +1,4 @@
+ Cold and dry, but everything is so red.
+ Two moons problematic for Wolfman - when to howl?
+ The Mummy appreciates the low humidity
++Moving to Mars is ill-advised
+MH01971931MACLT:~/Downloads/planets 10:13:30 169% git diff HEAD mars.txt 
+diff --git a/mars.txt b/mars.txt
+index 6b4590a..9895d0a 100644
+--- a/mars.txt
++++ b/mars.txt
+@@ -1,3 +1,4 @@
+ Cold and dry, but everything is so red.
+ Two moons problematic for Wolfman - when to howl?
+ The Mummy appreciates the low humidity
++Moving to Mars is ill-advised
+MH01971931MACLT:~/Downloads/planets 10:13:47 170% git diff HEAD~1 mars.txt 
+diff --git a/mars.txt b/mars.txt
+index 8e4b033..9895d0a 100644
+--- a/mars.txt
++++ b/mars.txt
+@@ -1,2 +1,4 @@
+ Cold and dry, but everything is so red.
+ Two moons problematic for Wolfman - when to howl?
++The Mummy appreciates the low humidity
++Moving to Mars is ill-advised
+MH01971931MACLT:~/Downloads/planets 10:15:32 171% git diff HEAD~2 mars.txt
+diff --git a/mars.txt b/mars.txt
+index 81bab10..9895d0a 100644
+--- a/mars.txt
++++ b/mars.txt
+@@ -1 +1,4 @@
+ Cold and dry, but everything is so red.
++Two moons problematic for Wolfman - when to howl?
++The Mummy appreciates the low humidity
++Moving to Mars is ill-advised
+MH01971931MACLT:~/Downloads/planets 10:16:06 172% git show HEAD~2 mars.txt
+commit 1e87ac7381472a2bc59e7d83212eda8e27a51d07
+Author: Vinai R <roopchansinghv@mail.nih.gov>
+Date:   Fri Sep 29 09:33:46 2017 -0400
+
+    Start planets project with notes on Mars.
+
+diff --git a/mars.txt b/mars.txt
+new file mode 100644
+index 0000000..81bab10
+--- /dev/null
++++ b/mars.txt
+@@ -0,0 +1 @@
++Cold and dry, but everything is so red.
+MH01971931MACLT:~/Downloads/planets 10:17:07 173% git log
+commit a13e29021d332cf2d0a45f15192643a1984cbbca (HEAD -> master)
+Author: Vinai R <roopchansinghv@mail.nih.gov>
+Date:   Fri Sep 29 09:56:57 2017 -0400
+
+    Comments on climate suitability for the Mummy
+
+commit 542b85d9129141f953bc8e0d63bbacd74208c0e1
+Author: Vinai R <roopchansinghv@mail.nih.gov>
+Date:   Fri Sep 29 09:46:07 2017 -0400
+
+    Potential effects of Mars' moons on Wolfman
+
+commit 1e87ac7381472a2bc59e7d83212eda8e27a51d07
+Author: Vinai R <roopchansinghv@mail.nih.gov>
+Date:   Fri Sep 29 09:33:46 2017 -0400
+
+    Start planets project with notes on Mars.
+MH01971931MACLT:~/Downloads/planets 10:18:42 174% git diff 1e87ac7381472a2bc59e7d83212eda8e27a51d07 mars.txt  
+diff --git a/mars.txt b/mars.txt
+index 81bab10..9895d0a 100644
+--- a/mars.txt
++++ b/mars.txt
+@@ -1 +1,4 @@
+ Cold and dry, but everything is so red.
++Two moons problematic for Wolfman - when to howl?
++The Mummy appreciates the low humidity
++Moving to Mars is ill-advised
+MH01971931MACLT:~/Downloads/planets 10:19:45 175% history | grep oneline
+   143	10:00	git log --oneline --graph --all --decorate
+   175	10:20	history | grep oneline
+MH01971931MACLT:~/Downloads/planets 10:20:40 176% !143
+git log --oneline --graph --all --decorate
+* a13e290 (HEAD -> master) Comments on climate suitability for the Mummy
+* 542b85d Potential effects of Mars' moons on Wolfman
+* 1e87ac7 Start planets project with notes on Mars.
+MH01971931MACLT:~/Downloads/planets 10:20:56 177% git diff 1e87ac7 mars.txt 
+diff --git a/mars.txt b/mars.txt
+index 81bab10..9895d0a 100644
+--- a/mars.txt
++++ b/mars.txt
+@@ -1 +1,4 @@
+ Cold and dry, but everything is so red.
++Two moons problematic for Wolfman - when to howl?
++The Mummy appreciates the low humidity
++Moving to Mars is ill-advised
+MH01971931MACLT:~/Downloads/planets 10:21:39 178% nano mars.txt 
+MH01971931MACLT:~/Downloads/planets 10:23:15 179% git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   mars.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+MH01971931MACLT:~/Downloads/planets 10:23:21 180% git diff 1e87ac7 mars.txt
+diff --git a/mars.txt b/mars.txt
+index 81bab10..c4e66be 100644
+--- a/mars.txt
++++ b/mars.txt
+@@ -1 +1,5 @@
+ Cold and dry, but everything is so red.
++Two moons problematic for Wolfman - when to howl?
++The Mummy appreciates the low humidity
++Moving to Mars is ill-advised
++We will need to make our own oxygen
+MH01971931MACLT:~/Downloads/planets 10:23:29 181% git diff head mars.txt
+diff --git a/mars.txt b/mars.txt
+index 6b4590a..c4e66be 100644
+--- a/mars.txt
++++ b/mars.txt
+@@ -1,3 +1,5 @@
+ Cold and dry, but everything is so red.
+ Two moons problematic for Wolfman - when to howl?
+ The Mummy appreciates the low humidity
++Moving to Mars is ill-advised
++We will need to make our own oxygen
+MH01971931MACLT:~/Downloads/planets 10:23:46 182% git diff HEAD mars.txt
+diff --git a/mars.txt b/mars.txt
+index 6b4590a..c4e66be 100644
+--- a/mars.txt
++++ b/mars.txt
+@@ -1,3 +1,5 @@
+ Cold and dry, but everything is so red.
+ Two moons problematic for Wolfman - when to howl?
+ The Mummy appreciates the low humidity
++Moving to Mars is ill-advised
++We will need to make our own oxygen
+MH01971931MACLT:~/Downloads/planets 10:23:54 183% git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   mars.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+MH01971931MACLT:~/Downloads/planets 10:25:22 184% git checkout HEAD mars.txt 
+MH01971931MACLT:~/Downloads/planets 10:26:17 185% git status
+On branch master
+nothing to commit, working tree clean
+MH01971931MACLT:~/Downloads/planets 10:26:22 186% cat mars.txt 
+Cold and dry, but everything is so red.
+Two moons problematic for Wolfman - when to howl?
+The Mummy appreciates the low humidity
+MH01971931MACLT:~/Downloads/planets 10:26:30 187% history | grep oneline
+   143	10:00	git log --oneline --graph --all --decorate
+   175	10:20	history | grep oneline
+   176	10:20	git log --oneline --graph --all --decorate
+   187	10:27	history | grep oneline
+MH01971931MACLT:~/Downloads/planets 10:27:08 188% !176
+git log --oneline --graph --all --decorate
+* a13e290 (HEAD -> master) Comments on climate suitability for the Mummy
+* 542b85d Potential effects of Mars' moons on Wolfman
+* 1e87ac7 Start planets project with notes on Mars.
+MH01971931MACLT:~/Downloads/planets 10:27:29 189% git checkout 1e87ac7 mars.txt 
+MH01971931MACLT:~/Downloads/planets 10:27:58 190% git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   mars.txt
+
+MH01971931MACLT:~/Downloads/planets 10:28:02 191% cat mars.txt 
+Cold and dry, but everything is so red.
+MH01971931MACLT:~/Downloads/planets 10:28:16 192% git checkout -f master mars.txt 
+MH01971931MACLT:~/Downloads/planets 10:29:31 193% git status
+On branch master
+nothing to commit, working tree clean
+MH01971931MACLT:~/Downloads/planets 10:29:40 194% git log mars.txt 
+commit a13e29021d332cf2d0a45f15192643a1984cbbca (HEAD -> master)
+Author: Vinai R <roopchansinghv@mail.nih.gov>
+Date:   Fri Sep 29 09:56:57 2017 -0400
+
+    Comments on climate suitability for the Mummy
+
+commit 542b85d9129141f953bc8e0d63bbacd74208c0e1
+Author: Vinai R <roopchansinghv@mail.nih.gov>
+Date:   Fri Sep 29 09:46:07 2017 -0400
+
+    Potential effects of Mars' moons on Wolfman
+
+commit 1e87ac7381472a2bc59e7d83212eda8e27a51d07
+Author: Vinai R <roopchansinghv@mail.nih.gov>
+Date:   Fri Sep 29 09:33:46 2017 -0400
+
+    Start planets project with notes on Mars.
+MH01971931MACLT:~/Downloads/planets 10:32:27 195% git log --patch HEAD~3 mars.txt
+fatal: ambiguous argument 'HEAD~3': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+MH01971931MACLT:~/Downloads/planets 10:32:59 196% git log --patch HEAD~2 mars.txt
+commit 1e87ac7381472a2bc59e7d83212eda8e27a51d07
+Author: Vinai R <roopchansinghv@mail.nih.gov>
+Date:   Fri Sep 29 09:33:46 2017 -0400
+
+    Start planets project with notes on Mars.
+
+diff --git a/mars.txt b/mars.txt
+new file mode 100644
+index 0000000..81bab10
+--- /dev/null
++++ b/mars.txt
+@@ -0,0 +1 @@
++Cold and dry, but everything is so red.
+MH01971931MACLT:~/Downloads/planets 10:33:14 197% pwd
+/Users/roopchansinghv/Downloads/planets
+MH01971931MACLT:~/Downloads/planets 10:46:04 198% mkdir results
+MH01971931MACLT:~/Downloads/planets 10:46:10 199% touch a.dat b.dat c.dat  results/a.out results/b.out
+MH01971931MACLT:~/Downloads/planets 10:46:33 200% git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	a.dat
+	b.dat
+	c.dat
+	results/
+
+nothing added to commit but untracked files present (use "git add" to track)
+MH01971931MACLT:~/Downloads/planets 10:46:38 201% ls -lF
+total 8
+-rw-r--r--  1 roopchansinghv  1360859114    0 Sep 29 10:46 a.dat
+-rw-r--r--  1 roopchansinghv  1360859114    0 Sep 29 10:46 b.dat
+-rw-r--r--  1 roopchansinghv  1360859114    0 Sep 29 10:46 c.dat
+-rw-r--r--  1 roopchansinghv  1360859114  129 Sep 29 10:29 mars.txt
+drwxr-xr-x  4 roopchansinghv  1360859114  136 Sep 29 10:46 results/
+MH01971931MACLT:~/Downloads/planets 10:47:26 202% ls -alF
+total 8
+drwxr-xr-x   8 roopchansinghv  1360859114  272 Sep 29 10:46 ./
+drwx------@  4 roopchansinghv  1360859114  136 Sep 29 09:16 ../
+drwxr-xr-x  12 roopchansinghv  1360859114  408 Sep 29 10:46 .git/
+-rw-r--r--   1 roopchansinghv  1360859114    0 Sep 29 10:46 a.dat
+-rw-r--r--   1 roopchansinghv  1360859114    0 Sep 29 10:46 b.dat
+-rw-r--r--   1 roopchansinghv  1360859114    0 Sep 29 10:46 c.dat
+-rw-r--r--   1 roopchansinghv  1360859114  129 Sep 29 10:29 mars.txt
+drwxr-xr-x   4 roopchansinghv  1360859114  136 Sep 29 10:46 results/
+MH01971931MACLT:~/Downloads/planets 10:47:31 203% nano .gitignore
+MH01971931MACLT:~/Downloads/planets 10:48:46 204% ls -alF
+total 16
+drwxr-xr-x   9 roopchansinghv  1360859114  306 Sep 29 10:48 ./
+drwx------@  4 roopchansinghv  1360859114  136 Sep 29 09:16 ../
+drwxr-xr-x  12 roopchansinghv  1360859114  408 Sep 29 10:46 .git/
+-rw-r--r--   1 roopchansinghv  1360859114   15 Sep 29 10:48 .gitignore
+-rw-r--r--   1 roopchansinghv  1360859114    0 Sep 29 10:46 a.dat
+-rw-r--r--   1 roopchansinghv  1360859114    0 Sep 29 10:46 b.dat
+-rw-r--r--   1 roopchansinghv  1360859114    0 Sep 29 10:46 c.dat
+-rw-r--r--   1 roopchansinghv  1360859114  129 Sep 29 10:29 mars.txt
+drwxr-xr-x   4 roopchansinghv  1360859114  136 Sep 29 10:46 results/
+MH01971931MACLT:~/Downloads/planets 10:48:53 205% cat .gitignore 
+*.dat
+results/
+MH01971931MACLT:~/Downloads/planets 10:49:05 206% git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	.gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+MH01971931MACLT:~/Downloads/planets 10:49:13 207% git add .gitignore 
+MH01971931MACLT:~/Downloads/planets 10:50:46 208% git commit -m "Setting up ignore list for git"
+[master 4b0dd3a] Setting up ignore list for git
+ 1 file changed, 2 insertions(+)
+ create mode 100644 .gitignore
+MH01971931MACLT:~/Downloads/planets 10:51:01 209% git add a.dat
+The following paths are ignored by one of your .gitignore files:
+a.dat
+Use -f if you really want to add them.
+MH01971931MACLT:~/Downloads/planets 10:51:23 210% git add -f a.dat
+MH01971931MACLT:~/Downloads/planets 10:51:47 211% git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   a.dat
+
+MH01971931MACLT:~/Downloads/planets 10:51:51 212% git reset HEAD a.dat 
+MH01971931MACLT:~/Downloads/planets 10:52:11 213% git status
+On branch master
+nothing to commit, working tree clean
+MH01971931MACLT:~/Downloads/planets 10:52:13 214% git status --ignored
+On branch master
+Ignored files:
+  (use "git add -f <file>..." to include in what will be committed)
+
+	a.dat
+	b.dat
+	c.dat
+	results/
+
+nothing to commit, working tree clean
+MH01971931MACLT:~/Downloads/planets 10:52:48 215% git help status
+MH01971931MACLT:~/Downloads/planets 10:54:38 216% mkdir results/data
+MH01971931MACLT:~/Downloads/planets 10:55:29 217% mkdir results/plots
+MH01971931MACLT:~/Downloads/planets 10:55:39 218% nano .gitignore 
+MH01971931MACLT:~/Downloads/planets 10:56:41 219% git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   .gitignore
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	results/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+MH01971931MACLT:~/Downloads/planets 10:56:44 220% ls -alF
+total 16
+drwxr-xr-x   9 roopchansinghv  1360859114  306 Sep 29 10:48 ./
+drwx------@  4 roopchansinghv  1360859114  136 Sep 29 09:16 ../
+drwxr-xr-x  12 roopchansinghv  1360859114  408 Sep 29 10:56 .git/
+-rw-r--r--   1 roopchansinghv  1360859114   20 Sep 29 10:56 .gitignore
+-rw-r--r--   1 roopchansinghv  1360859114    0 Sep 29 10:46 a.dat
+-rw-r--r--   1 roopchansinghv  1360859114    0 Sep 29 10:46 b.dat
+-rw-r--r--   1 roopchansinghv  1360859114    0 Sep 29 10:46 c.dat
+-rw-r--r--   1 roopchansinghv  1360859114  129 Sep 29 10:29 mars.txt
+drwxr-xr-x   6 roopchansinghv  1360859114  204 Sep 29 10:55 results/
+MH01971931MACLT:~/Downloads/planets 10:57:23 221% nano .gitignore 
+MH01971931MACLT:~/Downloads/planets 10:58:25 222% git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   .gitignore
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	a.dat
+
+no changes added to commit (use "git add" and/or "git commit -a")
+MH01971931MACLT:~/Downloads/planets 10:58:28 223% cat .gitignore 
+*.dat
+results/
+
+!a*
+MH01971931MACLT:~/Downloads/planets 10:59:38 224% nano .gitignore
+MH01971931MACLT:~/Downloads/planets DING! 225% git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+MH01971931MACLT:~/Downloads/planets 11:00:30 226% git remote
+MH01971931MACLT:~/Downloads/planets 11:11:20 227% git remote -a
+error: unknown switch `a'
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url>
+   or: git remote rename <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote get-url [--push] [--all] <name>
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    -v, --verbose         be verbose; must be placed before a subcommand
+
+MH01971931MACLT:~/Downloads/planets 11:11:23 228% git remote -v
+MH01971931MACLT:~/Downloads/planets 11:11:25 229% git remote add origin https://github.com/rv-nih/planets.git 
+MH01971931MACLT:~/Downloads/planets 11:11:50 230% git remote -v
+origin	https://github.com/rv-nih/planets.git (fetch)
+origin	https://github.com/rv-nih/planets.git (push)
+MH01971931MACLT:~/Downloads/planets 11:11:55 231% git push origin master
+remote: Permission to rv-nih/planets.git denied to roopchansinghv.
+fatal: unable to access 'https://github.com/rv-nih/planets.git/': The requested URL returned error: 403
+MH01971931MACLT:~/Downloads/planets 11:14:06 232% git --version
+git version 2.13.5 (Apple Git-94)
+MH01971931MACLT:~/Downloads/planets 11:14:41 233% git remote add origin https://rv-nih@github.com/rv-nih/planets.git
+fatal: remote origin already exists.
+MH01971931MACLT:~/Downloads/planets 11:15:39 234% git remote remove origin                                   MH01971931MACLT:~/Downloads/planets 11:15:52 235% git remote add origin https://rv-nih@github.com/rv-nih/planets.git
+MH01971931MACLT:~/Downloads/planets 11:15:54 236% git remote -v
+origin	https://rv-nih@github.com/rv-nih/planets.git (fetch)
+origin	https://rv-nih@github.com/rv-nih/planets.git (push)
+MH01971931MACLT:~/Downloads/planets 11:15:58 237% git push origin master                                     Password for 'https://rv-nih@github.com': 
+To https://github.com/rv-nih/planets.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://rv-nih@github.com/rv-nih/planets.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+MH01971931MACLT:~/Downloads/planets 11:16:30 238% git remote -v
+origin	https://rv-nih@github.com/rv-nih/planets.git (fetch)
+origin	https://rv-nih@github.com/rv-nih/planets.git (push)
+MH01971931MACLT:~/Downloads/planets 11:17:36 239% git pull
+warning: no common commits
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/rv-nih/planets
+ * [new branch]      master     -> origin/master
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> master
+
+MH01971931MACLT:~/Downloads/planets 11:17:50 240% ls -alF
+total 16
+drwxr-xr-x   9 roopchansinghv  1360859114  306 Sep 29 10:48 ./
+drwx------@  4 roopchansinghv  1360859114  136 Sep 29 09:16 ../
+drwxr-xr-x  13 roopchansinghv  1360859114  442 Sep 29 11:17 .git/
+-rw-r--r--   1 roopchansinghv  1360859114   21 Sep 29 11:00 .gitignore
+-rw-r--r--   1 roopchansinghv  1360859114    0 Sep 29 10:46 a.dat
+-rw-r--r--   1 roopchansinghv  1360859114    0 Sep 29 10:46 b.dat
+-rw-r--r--   1 roopchansinghv  1360859114    0 Sep 29 10:46 c.dat
+-rw-r--r--   1 roopchansinghv  1360859114  129 Sep 29 10:29 mars.txt
+drwxr-xr-x   6 roopchansinghv  1360859114  204 Sep 29 10:55 results/
+MH01971931MACLT:~/Downloads/planets 11:18:13 241% git pull origin master
+From https://github.com/rv-nih/planets
+ * branch            master     -> FETCH_HEAD
+fatal: refusing to merge unrelated histories
+MH01971931MACLT:~/Downloads/planets 11:18:35 242% git branch --set-upstream-to=origin/master master
+Branch master set up to track remote branch master from origin.
+MH01971931MACLT:~/Downloads/planets 11:19:09 243% git pull origin master
+From https://github.com/rv-nih/planets
+ * branch            master     -> FETCH_HEAD
+fatal: refusing to merge unrelated histories
+MH01971931MACLT:~/Downloads/planets 11:19:13 244% git remote -v
+origin	https://rv-nih@github.com/rv-nih/planets.git (fetch)
+origin	https://rv-nih@github.com/rv-nih/planets.git (push)
+MH01971931MACLT:~/Downloads/planets 11:19:49 245% git help push
+MH01971931MACLT:~/Downloads/planets 11:20:51 246% git push -f origin master
+Counting objects: 12, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (12/12), 1.12 KiB | 383.00 KiB/s, done.
+Total 12 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/rv-nih/planets.git
+ + 09a41e4...4b0dd3a master -> master (forced update)
+MH01971931MACLT:~/Downloads/planets 11:21:05 247% git pull
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/rv-nih/planets
+   4b0dd3a..5abeab8  master     -> origin/master
+Updating 4b0dd3a..5abeab8
+Fast-forward
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+ create mode 100644 README.md
+MH01971931MACLT:~/Downloads/planets 11:22:20 248% cd ..
+MH01971931MACLT:~/Downloads 11:37:03 249% ls -al
+total 0
+drwx------@  4 roopchansinghv  1360859114   136 Sep 29 09:16 .
+drwxr-xr-x+ 31 roopchansinghv  1360859114  1054 Sep 29 09:14 ..
+-rw-r--r--@  1 roopchansinghv  1360859114     0 Sep 28 12:47 .localized
+drwxr-xr-x  10 roopchansinghv  1360859114   340 Sep 29 11:22 planets
+MH01971931MACLT:~/Downloads 11:37:04 250% mv planets/ planets-vr-nih
+MH01971931MACLT:~/Downloads 11:37:15 251% git clone https://github.com/rv-nih/planets.git
+Cloning into 'planets'...
+remote: Counting objects: 15, done.
+remote: Compressing objects: 100% (8/8), done.
+remote: Total 15 (delta 1), reused 12 (delta 1), pack-reused 0
+Unpacking objects: 100% (15/15), done.
+MH01971931MACLT:~/Downloads 11:39:38 252% ls -al
+total 0
+drwx------@  5 roopchansinghv  1360859114   170 Sep 29 11:39 .
+drwxr-xr-x+ 31 roopchansinghv  1360859114  1054 Sep 29 09:14 ..
+-rw-r--r--@  1 roopchansinghv  1360859114     0 Sep 28 12:47 .localized
+drwxr-xr-x   6 roopchansinghv  1360859114   204 Sep 29 11:39 planets
+drwxr-xr-x  10 roopchansinghv  1360859114   340 Sep 29 11:22 planets-vr-nih
+MH01971931MACLT:~/Downloads 11:39:42 253% cd planets
+MH01971931MACLT:~/Downloads/planets 11:39:47 254% ls -al
+total 24
+drwxr-xr-x   6 roopchansinghv  1360859114  204 Sep 29 11:39 .
+drwx------@  5 roopchansinghv  1360859114  170 Sep 29 11:39 ..
+drwxr-xr-x  12 roopchansinghv  1360859114  408 Sep 29 11:39 .git
+-rw-r--r--   1 roopchansinghv  1360859114   15 Sep 29 11:39 .gitignore
+-rw-r--r--   1 roopchansinghv  1360859114   30 Sep 29 11:39 README.md
+-rw-r--r--   1 roopchansinghv  1360859114  129 Sep 29 11:39 mars.txt
+MH01971931MACLT:~/Downloads/planets 11:39:48 255% git clone https://github.com/rv-nih/planets.git planets-rv-nih-2
+Cloning into 'planets-rv-nih-2'...
+remote: Counting objects: 15, done.
+remote: Compressing objects: 100% (8/8), done.
+remote: Total 15 (delta 1), reused 12 (delta 1), pack-reused 0
+Unpacking objects: 100% (15/15), done.
+MH01971931MACLT:~/Downloads/planets 11:40:59 256% ls -al
+total 24
+drwxr-xr-x   7 roopchansinghv  1360859114  238 Sep 29 11:40 .
+drwx------@  5 roopchansinghv  1360859114  170 Sep 29 11:39 ..
+drwxr-xr-x  12 roopchansinghv  1360859114  408 Sep 29 11:39 .git
+-rw-r--r--   1 roopchansinghv  1360859114   15 Sep 29 11:39 .gitignore
+-rw-r--r--   1 roopchansinghv  1360859114   30 Sep 29 11:39 README.md
+-rw-r--r--   1 roopchansinghv  1360859114  129 Sep 29 11:39 mars.txt
+drwxr-xr-x   6 roopchansinghv  1360859114  204 Sep 29 11:40 planets-rv-nih-2
+MH01971931MACLT:~/Downloads/planets 11:41:02 257% rm -rf planets-rv-nih-2/
+MH01971931MACLT:~/Downloads/planets 11:41:10 258% cd ..
+MH01971931MACLT:~/Downloads 11:41:13 259% ls -alF
+total 0
+drwx------@  5 roopchansinghv  1360859114   170 Sep 29 11:39 ./
+drwxr-xr-x+ 31 roopchansinghv  1360859114  1054 Sep 29 09:14 ../
+-rw-r--r--@  1 roopchansinghv  1360859114     0 Sep 28 12:47 .localized
+drwxr-xr-x   6 roopchansinghv  1360859114   204 Sep 29 11:41 planets/
+drwxr-xr-x  10 roopchansinghv  1360859114   340 Sep 29 11:22 planets-vr-nih/
+MH01971931MACLT:~/Downloads 11:41:23 260% git clone https://github.com/rv-nih/planets.git planets-rv-nih-command-line-rename
+Cloning into 'planets-rv-nih-command-line-rename'...
+remote: Counting objects: 15, done.
+remote: Compressing objects: 100% (8/8), done.
+remote: Total 15 (delta 1), reused 12 (delta 1), pack-reused 0
+Unpacking objects: 100% (15/15), done.
+MH01971931MACLT:~/Downloads 11:41:51 261% ls -al
+total 0
+drwx------@  6 roopchansinghv  1360859114   204 Sep 29 11:41 .
+drwxr-xr-x+ 31 roopchansinghv  1360859114  1054 Sep 29 09:14 ..
+-rw-r--r--@  1 roopchansinghv  1360859114     0 Sep 28 12:47 .localized
+drwxr-xr-x   6 roopchansinghv  1360859114   204 Sep 29 11:41 planets
+drwxr-xr-x   6 roopchansinghv  1360859114   204 Sep 29 11:41 planets-rv-nih-command-line-rename
+drwxr-xr-x  10 roopchansinghv  1360859114   340 Sep 29 11:22 planets-vr-nih
+MH01971931MACLT:~/Downloads 11:41:53 262% rm -rf planets-rv-nih-command-line-rename/
+MH01971931MACLT:~/Downloads 11:43:12 263% mv planets-vr-nih/ planets-teching
+MH01971931MACLT:~/Downloads 11:43:29 264% mv planets planets-cloned
+MH01971931MACLT:~/Downloads 11:43:38 265% ls -al
+total 0
+drwx------@  5 roopchansinghv  1360859114   170 Sep 29 11:43 .
+drwxr-xr-x+ 31 roopchansinghv  1360859114  1054 Sep 29 09:14 ..
+-rw-r--r--@  1 roopchansinghv  1360859114     0 Sep 28 12:47 .localized
+drwxr-xr-x   6 roopchansinghv  1360859114   204 Sep 29 11:41 planets-cloned
+drwxr-xr-x  10 roopchansinghv  1360859114   340 Sep 29 11:22 planets-teching
+MH01971931MACLT:~/Downloads 11:43:39 266% cd planets-cloned/
+MH01971931MACLT:~/Downloads/planets-cloned 11:43:50 267% ls -al
+total 24
+drwxr-xr-x   6 roopchansinghv  1360859114  204 Sep 29 11:41 .
+drwx------@  5 roopchansinghv  1360859114  170 Sep 29 11:43 ..
+drwxr-xr-x  12 roopchansinghv  1360859114  408 Sep 29 11:39 .git
+-rw-r--r--   1 roopchansinghv  1360859114   15 Sep 29 11:39 .gitignore
+-rw-r--r--   1 roopchansinghv  1360859114   30 Sep 29 11:39 README.md
+-rw-r--r--   1 roopchansinghv  1360859114  129 Sep 29 11:39 mars.txt
+MH01971931MACLT:~/Downloads/planets-cloned 11:43:53 268% nano pluto.txt
+MH01971931MACLT:~/Downloads/planets-cloned 11:44:19 269% git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	pluto.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+MH01971931MACLT:~/Downloads/planets-cloned 11:44:27 270% git add pluto.txt 
+MH01971931MACLT:~/Downloads/planets-cloned 11:44:42 271% git commit -m "Message about Pluto's status"
+[master 392e8d5] Message about Pluto's status
+ 1 file changed, 1 insertion(+)
+ create mode 100644 pluto.txt
+MH01971931MACLT:~/Downloads/planets-cloned 11:45:07 272%
+
+
